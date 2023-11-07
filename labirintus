@@ -1,0 +1,31 @@
+##functions
+def print_maze(maze):
+	for i in range(0, len(maze)):
+		for j in range(0, len(maze[0])):
+			if maze[i][j] =='u':
+				print(f'{maze[i][j]}', end="")
+			elif maze[i][j] == "c":
+				print(f'{maze[i][j]}', end="")
+			else:
+				print(f'{maze[i][j]}', end="")
+		print('\n')
+
+def init_maze(width, height):
+	maze=[]
+	for i in range(0, height):
+		line=[]
+		for j in range(0, width):
+			line.append('u')
+		maze.append(line)
+	return maze
+
+##main
+cell='c'
+wall='w'
+unvisited='u'
+maze=[]
+height=10
+width=10
+
+init_maze(width, height)
+print_maze(maze)
